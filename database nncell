@@ -1,0 +1,640 @@
+@@ -0,0 +1,639 @@
+-- phpMyAdmin SQL Dump
+-- version 4.9.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost:3306
+-- Waktu pembuatan: 13 Okt 2019 pada 07.20
+-- Versi server: 10.3.16-MariaDB
+-- Versi PHP: 7.3.2
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `id11191110_noericelladmin`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `accesoris`
+--
+
+CREATE TABLE `accesoris` (
+  `id` int(11) NOT NULL,
+  `tanggal` date NOT NULL,
+  `nama` varchar(128) NOT NULL,
+  `harga` decimal(11,0) NOT NULL,
+  `catatan` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `accesoris`
+--
+
+INSERT INTO `accesoris` (`id`, `tanggal`, `nama`, `harga`, `catatan`) VALUES
+(2, '2019-05-18', 'headset', 15000, ''),
+(3, '2019-05-18', 'headset', 15000, ''),
+(4, '2019-05-17', 'baterai bl 4c', 30000, ''),
+(5, '2019-05-17', 'kabel data', 10000, ''),
+(6, '2019-05-16', 'tc samsung', 35000, ''),
+(7, '2019-05-16', 'baterai samsung prime', 85000, ''),
+(8, '2019-05-16', 'chasing prime', 65000, ''),
+(9, '2019-05-16', 'tc samsung', 30000, ''),
+(10, '2019-05-14', 'tc samsung', 35000, ''),
+(11, '2019-05-13', 'kabel data', 10000, ''),
+(12, '2019-05-10', 'kabel data', 10000, ''),
+(13, '2019-05-09', 'tc samsung', 35000, ''),
+(14, '2019-05-09', 'headset', 15000, ''),
+(15, '2019-05-08', 'desktop', 20000, ''),
+(16, '2019-05-08', 'tc mobil', 15000, ''),
+(17, '2019-05-07', 'kabel data', 10000, ''),
+(18, '2019-05-04', 'headset', 15000, ''),
+(19, '2019-05-04', 'tc samsung', 35000, ''),
+(20, '2019-05-04', 'kabel data', 10000, ''),
+(21, '2019-05-04', 'parfum', 20000, ''),
+(22, '2019-05-03', 'kabel data', 10000, ''),
+(23, '2019-05-03', 'kabel data', 10000, ''),
+(24, '2019-05-01', 'desktop', 20000, ''),
+(25, '2019-05-01', 'kabel data', 10000, ''),
+(26, '2019-04-29', 'tg', 15000, ''),
+(33, '2019-04-26', 'headset', 15000, ''),
+(34, '2019-04-25', 'tg', 15000, ''),
+(35, '2019-04-25', 'lc tab', 10000, ''),
+(36, '2019-04-25', 'kabel data', 10000, ''),
+(37, '2019-04-24', 'kabel data', 10000, ''),
+(38, '2019-04-24', 'tc bb', 20000, ''),
+(39, '2019-04-22', 'kabel data', 10000, ''),
+(40, '2019-04-22', 'tc samsung', 35000, ''),
+(41, '2019-05-20', 'tg', 15000, ''),
+(42, '2019-05-20', 'silicon j2 prime', 15000, ''),
+(43, '2019-05-21', 'parfum', 25000, ''),
+(44, '2019-05-21', 'tg j2 prime', 15000, ''),
+(45, '2019-05-21', 'silicon j2 prime', 15000, ''),
+(46, '2019-05-22', 'kabel data', 10000, ''),
+(47, '2019-04-20', 'tc samsung', 35000, ''),
+(48, '2019-04-20', 'desktop', 20000, ''),
+(51, '2019-04-19', 'baterai bl 4c', 30000, ''),
+(52, '2019-04-19', 'tc samsung', 30000, ''),
+(53, '2019-04-19', 'kabel data', 10000, ''),
+(54, '2019-05-23', 'baterai bl 4c', 30000, ''),
+(55, '2019-05-24', 'tg j2 pro', 15000, ''),
+(56, '2019-05-24', 'parfum', 25000, ''),
+(57, '2019-05-25', 'tc samsung', 35000, ''),
+(58, '2019-05-25', 'kabel data', 10000, ''),
+(59, '2019-05-25', 'tc samsung', 35000, ''),
+(60, '2019-05-27', 'bl 4c', 30000, ''),
+(61, '2019-05-29', 'tc samsung', 30000, ''),
+(62, '2019-05-29', 'bl 4c', 30000, ''),
+(63, '2019-05-30', 'parfum', 25000, ''),
+(64, '2019-05-31', 'bp 4ul', 30000, ''),
+(65, '2019-05-31', 'tc samsung', 35000, ''),
+(66, '2019-05-31', 'tc samsung', 35000, ''),
+(67, '2019-06-01', 'baterai bl 4c', 30000, ''),
+(68, '2019-06-03', 'pb', 35000, ''),
+(69, '2019-06-03', 'kabel data', 10000, ''),
+(70, '2019-06-03', 'tc samsung', 35000, ''),
+(71, '2019-06-03', 'hf', 15000, ''),
+(72, '2019-06-03', 'ring', 5000, ''),
+(73, '2019-06-03', 'parfum', 25000, ''),
+(74, '2019-06-10', 'kabel data', 10000, ''),
+(75, '2019-06-10', 'kabel data', 10000, ''),
+(76, '2019-10-07', 'tc samsung', 35000, ''),
+(77, '2019-10-07', 'tc samsung', 35000, ''),
+(78, '2019-10-07', 'parfum', 25000, ''),
+(79, '2019-10-08', 'kabel data', 10000, ''),
+(80, '2019-10-10', 'kabel data', 10000, ''),
+(81, '2019-10-11', 'noisy', 5000, ''),
+(82, '2019-10-01', 'kabel data', 10000, ''),
+(83, '2019-10-03', 'parfun', 25000, ''),
+(84, '2019-10-03', 'kabel data', 10000, ''),
+(85, '2019-10-03', 'tg', 5, '');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `hp_in`
+--
+
+CREATE TABLE `hp_in` (
+  `id` int(11) NOT NULL,
+  `tanggal` date NOT NULL,
+  `merk` varchar(30) NOT NULL,
+  `tipe` varchar(30) NOT NULL,
+  `imei` text NOT NULL,
+  `jaringan` varchar(10) NOT NULL,
+  `garansi` varchar(20) NOT NULL,
+  `ram` float NOT NULL,
+  `rom` smallint(6) NOT NULL,
+  `harga` decimal(11,0) NOT NULL,
+  `kelengkapan` text NOT NULL,
+  `kerusakan` text NOT NULL,
+  `sales` varchar(25) NOT NULL,
+  `catatan` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `hp_in`
+--
+
+INSERT INTO `hp_in` (`id`, `tanggal`, `merk`, `tipe`, `imei`, `jaringan`, `garansi`, `ram`, `rom`, `harga`, `kelengkapan`, `kerusakan`, `sales`, `catatan`) VALUES
+(34, '2019-05-17', 'huawei', 'y3', '3017', '3G', 'tidak ada', 1, 8, 450000, 'hp dus cas', '', 'bose', ''),
+(35, '2019-05-17', 'samsung', 'j7 prime', '6752', '4G', 'tidak ada', 3, 32, 1500000, 'hp dus cas headset', 'restart', 'narko', 'return tanggal 14/5/2019'),
+(36, '2019-05-16', 'vivo', 'y81', '3392', '4G', 'resmi', 2, 16, 1325000, 'hp dus cas', '', 'sis', 'return 13/5/2019'),
+(37, '2019-05-15', 'xiaomi', 'redmi note 5a', '7078', '4G', 'distributor', 2, 16, 500000, 'hp dus cas', 'lcd ts', 'sis', ''),
+(38, '2019-05-14', 'oppo', 'a3s', '8910', '4G', 'resmi', 2, 16, 1400000, 'hp dus cas', '', 'narko', ''),
+(39, '2019-05-13', 'vivo', 'y53', '7136', '4G', 'resmi', 2, 16, 825000, 'hp dus cas', '', 'sis', ''),
+(40, '2019-05-11', 'xiaomi', 'redmi s2', '8670', '4G', 'tidak ada', 3, 32, 500000, 'hp dus', 'restart', 'sis', 'restart bongkaran'),
+(41, '2019-05-10', 'samsung', 'a7', '8776', '4G', 'tidak ada', 3, 32, 1550000, 'hp dus cas headset', '', 'sis', ''),
+(42, '2019-05-10', 'oppo', 'realme3', '5235', '4G', 'resmi', 3, 32, 1350000, 'hp dus cas', '', 'sis', ''),
+(43, '2019-05-10', 'xiaomi', 'mi max2', '1424', '4G', 'distributor', 4, 64, 1500000, 'hp dus cas', '', 'sis', ''),
+(44, '2019-05-09', 'oppo', 'a3s', '2839', '4G', 'resmi', 3, 32, 1500000, 'hp dus cas', '', 'sis', ''),
+(45, '2019-05-09', 'evercoss', 'u50', '9948', '4G', 'tidak ada', 1, 8, 300000, 'hp dus cas headset', '', 'sis', ''),
+(46, '2019-05-09', 'advan', 'i5c+', '5940', '4G', 'tidak ada', 2, 16, 400000, 'hp dus cas headset', '', 'narko', ''),
+(47, '2019-05-08', 'oppo', 'neo5', '1656', '3G', 'tidak ada', 1, 8, 400000, 'hp dus', '', 'sis', ''),
+(48, '2019-05-08', 'lenovo', 'a2010', '2539', '4G', 'tidak ada', 1, 8, 360000, 'hp dus', '', 'sis', ''),
+(49, '2019-05-08', 'samsung', 'j7 prime', '9648', '4G', 'tidak ada', 3, 32, 1225000, 'hp dus cas headset', '', 'narko', ''),
+(50, '2019-05-07', 'xiaomi', 'redmi note 4x sd', '6644', '4G', 'tidak ada', 3, 32, 1000000, 'hp dus cas', '', 'sis', ''),
+(51, '2019-05-06', 'oppo', 'a71 2017', '8176', '4G', 'tidak ada', 2, 16, 1000000, 'hp dus cas headset', '', 'narko', ''),
+(52, '2019-05-04', 'advan', 'tab e1c', '8804', '3G', 'tidak ada', 0.5, 8, 350000, 'hp dus', '', 'sis', ''),
+(53, '2019-05-04', 'vivo', 'y93', '9951', '4G', 'resmi', 2, 16, 1400000, 'hp dus cas', '', 'narko', ''),
+(54, '2019-05-04', 'samsung', 'j2 prime', '6414', '4G', 'tidak ada', 1.5, 16, 800000, 'hp dus cas headset', '', 'sis', ''),
+(55, '2019-05-03', 'samsung', 'j2 prime', '2097', '4G', 'tidak ada', 1.5, 8, 800000, 'hp dus cas headset', '', 'narko', ''),
+(56, '2019-05-02', 'evercoss', 'tab x7', '6402', '3G', 'tidak ada', 1, 8, 400000, 'hp dus', '', 'sis', ''),
+(57, '2019-05-01', 'xiaomi', 'redmi 4a', '2200', '4G', 'distributor', 2, 16, 750000, 'hp dus cas', '', 'sis', ''),
+(58, '2019-04-29', 'huawei', 'c9', '4957', '4G', 'tidak ada', 2, 16, 700000, 'hp dus cas', '', 'sis', ''),
+(59, '2019-04-29', 'evercoss', 'm40', '5600', '4G', 'tidak ada', 1, 8, 325000, 'hp dus cas headset', '', 'sis', ''),
+(70, '2019-04-27', 'xiaomi', 'redmi 6a', '6405', '4G', 'distributor', 2, 16, 900000, 'hp dus cas', '', 'narko', ''),
+(71, '2019-04-27', 'asus', 'zenfone max', '4247', '4G', 'tidak ada', 2, 16, 600000, 'hp dus cas', 'buzzer lirih', 'narko', ''),
+(72, '2019-04-27', 'xiaomi', 'redmi 5a', '9293', '4G', 'distributor', 2, 16, 900000, 'hp dus cas', '', 'narko', ''),
+(73, '2019-04-25', 'xiaomi', 'redmi 5a', '7287', '4G', 'distributor', 2, 16, 900000, 'hp dus cas', '', 'sis', 'return 19/4'),
+(74, '2019-04-25', 'xiaomi', 'redmi 6a', '1064', '4G', 'distributor', 2, 16, 900000, 'hp dus cas', '', 'narko', ''),
+(75, '2019-04-24', 'samsung', 'j7 2016', '5430', '4G', 'tidak ada', 2, 16, 900000, 'hp dus cas headset', '', 'sis', ''),
+(76, '2019-04-23', 'samsung', 'j1 2016', '4625', '4G', 'tidak ada', 1, 8, 420000, 'hp dus cas headset', '', 'sis', ''),
+(77, '2019-04-22', 'lenovo', 'a6000+', '3535', '4G', 'tidak ada', 2, 16, 625000, 'hp dus cas headset', '', 'sis', 'return 15/4/2019'),
+(78, '2019-04-22', 'smartfren', 'andromax b', '4540', '4G', 'tidak ada', 1, 8, 400000, 'hp dus', '', 'sis', ''),
+(79, '2019-05-21', 'vivo', 'y65', '7590', '4G', 'resmi', 2, 16, 900000, 'hp dus cas headset', '', 'sis', ''),
+(80, '2019-04-20', 'oppo', 'a37', '7531', '4G', 'resmi', 2, 16, 950000, 'hp dus cas headset', '', 'narko', 'return 18/4/2019'),
+(81, '2019-04-20', 'oppo', 'a37', '0811', '4G', 'resmi', 2, 16, 950000, 'hp dus cas headset', '', 'narko', 'return 18/4/2019'),
+(84, '2019-04-19', 'vivo', 'y53', '7136', '4G', 'resmi', 2, 16, 800000, 'hp dus cas', '', 'bose', ''),
+(85, '2019-04-19', 'spc', 'tab p5', '8215', '3G', 'tidak ada', 1, 8, 400000, 'hp dus cas headset', '', 'sis', 'return 18/4/2019'),
+(86, '2019-04-19', 'vivo', 'y81', '3392', '4G', 'resmi', 2, 16, 1400000, 'hp dus cas', '', 'sis', 'return 15/4/2019'),
+(87, '2019-05-24', 'vivo', 'y93', '1234', '4G', 'resmi', 3, 32, 1450000, 'hp dus cas', '', 'bose', ''),
+(88, '2019-05-24', 'lenovo', 'a7000', '3412', '4G', 'tidak ada', 2, 8, 800000, 'hp dus cas headset', '', 'sis', 'return 21/5/2019'),
+(89, '2019-05-24', 'vivo', 'y93', '6491', '4G', 'resmi', 3, 32, 1450000, 'hp dus cas', '', 'narko', ''),
+(90, '2019-05-27', 'oppo', 'neo5', '1656', '3G', 'tidak ada', 1, 16, 540000, 'hp dus cas', '', 'sis', ''),
+(91, '2019-05-29', 'lenovo', 'a6000+', '3535', '4G', 'tidak ada', 2, 16, 625000, 'hp dus', '', 'bose', ''),
+(92, '2019-05-29', 'samsung', 'galaxy v', '4810', '3G', 'tidak ada', 0.5, 8, 300000, 'hp dus cas headset', '', 'sis', 'return 9/5/2019'),
+(93, '2019-05-29', 'samsung', 'a50', '4124', '4G', 'resmi', 4, 64, 2450000, 'hp dus cas headset', '', 'sis', ''),
+(94, '2019-05-30', 'oppo', 'a57', '1254', '4G', 'tidak ada', 3, 32, 1000000, 'hp dus cas headset', '', 'sis', ''),
+(95, '2019-05-31', 'meizu', 'm5 note', '8586', '4G', 'tidak ada', 3, 32, 800000, 'hp dus cas headset', '', 'sis', ''),
+(96, '2019-05-31', 'evercoss', 'a53c', '3966', '3G', 'tidak ada', 0.25, 4, 125000, 'hp dus cas', '', 'bose', ''),
+(97, '2019-05-31', 'xiaomi', 'redmi 5a', '0206', '4G', 'distributor', 2, 16, 650000, 'hp dus cas', '', 'sis', ''),
+(98, '2019-06-03', 'samsung', 'j3 pro', '2271', '4G', 'resmi', 2, 16, 950000, 'hp dus cas', '', 'sis', ''),
+(99, '2019-06-10', 'samsung', 'j5 2015', '3746', '4G', 'tidak ada', 1.5, 8, 700000, 'hp dus cas', '', 'narko', ''),
+(100, '2019-06-10', 'samsung', 'j2', '5341', '4G', 'tidak ada', 1, 8, 700000, 'hp dus cas', '', 'narko', ''),
+(102, '2019-10-10', 'himax ', 'm4', '7670', '4G', 'tidak ada', 2, 16, 450000, 'hp dus cas', 'baterai cepat habis', 'narko', ''),
+(103, '2019-10-10', 'samsung', 'm20', '1393', '4G', 'tidak ada', 3, 32, 1500000, 'hp dus cas headset', 'tidak ada', 'narko', 'kerduse jek di gowo'),
+(104, '2019-10-11', 'oppo', 'a5s', '4931', '4G', 'tidak ada', 2, 32, 1250000, 'hp dus cas', 'tidak ada', 'narko', ''),
+(105, '2019-10-11', 'samsung', 'j2 pro', '4411', '4G', 'tidak ada', 1.5, 16, 700000, 'hp dus cas', 'tidak ada', 'sis', ''),
+(106, '2019-10-11', 'samsung', 'j2 prime', '6414', '4G', 'tidak ada', 1.5, 8, 700000, 'hp dus cas', 'tidak ada', 'sis', ''),
+(107, '2019-10-01', 'xiaomi', 'redmi note 2', '3092', '4G', 'distributor', 2, 16, 600000, 'hp dus cas', '', 'sis', ''),
+(108, '2019-10-01', 'samsung', 'j7 core', '7913', '4G', 'tidak ada', 2, 16, 800000, 'hp dus cas', '', 'sis', ''),
+(109, '2019-10-01', 'oppo', 'a3s', '6018', '4G', 'tidak ada', 3, 32, 1300000, 'hp dus cas', '', 'sis', ''),
+(110, '2019-10-01', 'xiaomi', 'redmi note 5a', '8538', '4G', 'tidak ada', 2, 16, 600000, 'hp dus cas', '', 'sis', ''),
+(111, '2019-10-01', 'oppo', 'a7', '0975', '4G', 'tidak ada', 4, 64, 1700000, 'hp dus cas', '', 'narko', ''),
+(112, '2019-10-03', 'xiaomi', 'redmi 5a', '5628', '4G', 'tidak ada', 2, 16, 650000, 'hp dus cas', '', 'sis', ''),
+(113, '2019-10-03', 'oppo', 'f11', '0000', '4G', 'tidak ada', 4, 128, 2150000, 'hp dus cas', '', 'sis', ''),
+(114, '2019-10-03', 'samsung', 'j2 prime', '6129', '4G', 'tidak ada', 1.5, 8, 650000, 'hp cas', '', 'narko', ''),
+(115, '2019-10-05', 'samsung', 'j6', '9036', '4G', 'tidak ada', 3, 32, 1200000, 'hp dus cas', '', 'sis', ''),
+(116, '2019-10-05', 'samsung', 'a20', '5533', '4G', 'tidak ada', 3, 32, 1500000, 'hp dus cas headset', '', 'sis', ''),
+(117, '2019-10-05', 'samsung', 'j2 prime', '3734', '4G', 'tidak ada', 1.5, 4, 580000, 'hp cas', '', 'narko', ''),
+(118, '2019-10-05', 'xiaomi', 'redmi note 5a', '4002', '4G', 'tidak ada', 2, 16, 700000, 'hp dus cas', '', 'sis', '');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `hp_out`
+--
+
+CREATE TABLE `hp_out` (
+  `id` int(11) NOT NULL,
+  `tanggal` date NOT NULL,
+  `merk` varchar(20) NOT NULL,
+  `tipe` varchar(30) NOT NULL,
+  `imei` varchar(10) NOT NULL,
+  `jaringan` varchar(10) NOT NULL,
+  `garansi` varchar(20) NOT NULL,
+  `ram` float NOT NULL,
+  `rom` smallint(11) NOT NULL,
+  `harga_awal` decimal(11,0) NOT NULL,
+  `terjual` decimal(11,0) NOT NULL,
+  `kelengkapan` text NOT NULL,
+  `kerusakan` text NOT NULL,
+  `sales` varchar(20) NOT NULL,
+  `catatan` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `hp_out`
+--
+
+INSERT INTO `hp_out` (`id`, `tanggal`, `merk`, `tipe`, `imei`, `jaringan`, `garansi`, `ram`, `rom`, `harga_awal`, `terjual`, `kelengkapan`, `kerusakan`, `sales`, `catatan`) VALUES
+(25, '2019-05-18', 'samsung', 'j1 2016', '4625', '4G', 'tidak ada', 1, 8, 790000, 725000, 'hp dus cas headset', '', 'sis', ''),
+(26, '2019-05-17', 'vivo', 'y93', '9953', '4G', 'resmi', 3, 32, 1750000, 1700000, 'hp dus cas', '', 'sis', ''),
+(27, '2019-05-14', 'oppo', 'a37', '7531', '4G', 'tidak ada', 2, 16, 1075000, 1025000, 'hp dus cas headset', '', 'sis', ''),
+(28, '2019-05-14', 'samsung', 'j7prime', '6752', '4G', 'tidak ada', 3, 32, 1600000, 1500000, 'hp dus cas headset', '', 'narko', ''),
+(29, '2019-05-13', 'xiaomi', 'redmi 5a', '1823', '4G', 'distributor', 2, 16, 1050000, 990000, 'hp dus cas', '', 'sis', ''),
+(30, '2019-05-13', 'vivo', 'y81', '3392', '4G', 'resmi', 2, 16, 1450000, 1400000, 'hp dus cas', '', 'sis', ''),
+(31, '2019-05-11', 'evercoss', 'u50', '9948', '4G', 'tidak ada', 1, 8, 550000, 550000, 'hp dus cas headset', '', 'sis', ''),
+(32, '2019-05-11', 'lenovo', 'a2010', '2539', '4G', 'tidak ada', 1, 8, 575000, 525000, 'hp dus cas headset', '', 'sis', ''),
+(33, '2019-05-10', 'lenovo', 'a6000+', '3535', '4G', 'tidak ada', 2, 16, 800000, 750000, 'hp dus cas headset', '', 'sis', ''),
+(34, '2019-05-10', 'samsung', 'j2 prime', '6414', '4G', 'tidak ada', 1.5, 16, 990000, 910000, 'hp dus cas headset', '', 'narko', ''),
+(35, '2019-05-09', 'samsung', 'galaxy v', '4810', '4G', 'tidak ada', 0.5, 8, 435000, 400000, 'hp', '', 'sis', ''),
+(36, '2019-05-06', 'advan', 'i5e', '0868', '4G', 'tidak ada', 2, 16, 675000, 600000, 'hp dus cas headset', '', 'sis', ''),
+(37, '2019-05-06', 'nokia', 'n501', '5604', 'E', 'tidak ada', 0, 4, 250000, 200000, 'hp', '', 'narko', ''),
+(38, '2019-05-06', 'xiaomi', 'redmi 4a', '2200', '4G', 'distributor', 2, 16, 1000000, 950000, 'hp dus cas', '', 'sis', ''),
+(39, '2019-05-04', 'xiaomi', 'redmi 5a', '7287', '4G', 'tidak ada', 2, 16, 1050000, 1000000, 'hp dus cas', '', 'sis', ''),
+(40, '2019-05-04', 'bellphone', 'bp99', '0824', '3G', 'tidak ada', 1, 8, 325000, 325000, 'hp', '', 'sis', ''),
+(41, '2019-05-04', 'evercoss', 'm40', '5600', '4G', 'tidak ada', 1, 8, 475000, 400000, 'hp dus cas headset', '', 'narko', ''),
+(42, '2019-05-03', 'vivo', 'y53', '7136', '4G', 'resmi', 2, 16, 1000000, 910000, 'hp dus cas headset', '', 'narko', ''),
+(43, '2019-05-03', 'samsung', 'j5 2016', '4742', '4G', 'tidak ada', 2, 16, 1290000, 1200000, 'hp dus cas headset', '', 'narko', ''),
+(44, '2019-05-02', 'asus', 'zenfone max', '4247', '4G', 'tidak ada', 2, 16, 975000, 900000, 'hp dus cas', '', 'narko', ''),
+(45, '2019-05-01', 'avdan', 'tab e1c', '8804', 'E', 'tidak ada', 1, 4, 400000, 350000, 'hp', '', 'bose', ''),
+(46, '2019-04-29', 'smartfren', 'andromax b', '4540', '4G', 'tidak ada', 1, 8, 450000, 400000, 'hp dus', '', 'sis', ''),
+(47, '2019-04-29', 'samsung', 'j7 2016', '5430', '4G', 'tidak ada', 2, 16, 990000, 990000, 'hp dus cas headset', '', 'sis', ''),
+(48, '2019-04-29', 'evercoss', 'tab x7', '6402', '3G', 'tidak ada', 1, 8, 450000, 400000, 'hp dus cas headset', '', 'sis', ''),
+(63, '2019-04-27', 'xiaomi', 'redmi 6a', '6405', '4G', 'distributor', 2, 16, 1090000, 1000000, 'hp dus cas', '', 'sis', ''),
+(64, '2019-04-27', 'samsung', 'note3', '3759', '3G', 'tidak ada', 3, 32, 900000, 800000, 'hp dus cas headset', '', 'sis', ''),
+(65, '2019-04-27', 'xiaomi', 'redmi 6a', '1064', '4G', 'distributor', 2, 16, 1090000, 1035000, 'hp dus cas', '', 'narko', ''),
+(66, '2019-04-27', 'xiaomi', 'redmi note 5a', '1331', '4G', 'distributor', 2, 16, 1175000, 1100000, 'hp dus cas', '', 'sis', ''),
+(67, '2019-04-25', 'spc', 'tab p5', '8215', '3G', 'tidak ada', 1, 8, 450000, 390000, 'hp dus cas headset', '', 'narko', ''),
+(68, '2019-04-25', 'nokia', 'n130', '3962', 'E', 'tidak ada', 0, 4, 200000, 170000, 'hp dus cas', '', 'sis', ''),
+(69, '2019-04-24', 'lenovo', 'a2010', '2455', '4G', 'tidak ada', 1, 8, 590000, 520000, 'hp dus cas headset', '', 'sis', ''),
+(70, '2019-04-24', 'xiaomi', 'redmi 5a', '6447', '4G', 'distributor', 2, 16, 1050000, 925000, 'hp dus cas', '', 'narko', ''),
+(71, '2019-04-24', 'xiaomi', 'redmi 5a', '0797', '4G', 'distributor', 3, 32, 1200000, 1075000, 'hp dus cas', '', 'narko', ''),
+(72, '2019-04-24', 'xiaomi', 'redmi 6a', '6535', '4G', 'distributor', 2, 16, 1075000, 975000, 'hp dus cas', '', 'narko', ''),
+(73, '2019-04-22', 'nokia', 'n105', '0429', 'E', 'tidak ada', 0, 4, 150000, 150000, 'hp dus cas', '', 'sis', ''),
+(74, '2019-04-22', 'samsung', 'galaxy v', '3507', '3G', 'tidak ada', 1, 8, 475000, 410000, 'hp dus cas headset', '', 'narko', ''),
+(75, '2019-05-20', 'samsung', 'j2 prime', '2097', '4G', 'tidak ada', 1.5, 8, 990000, 925000, 'hp dus cas headset', '', 'narko', ''),
+(76, '2019-05-20', 'advan', 'i5c+', '5940', '4G', 'tidak ada', 2, 16, 650000, 600000, 'hp dus cas headset', '', 'narko', ''),
+(77, '2019-05-21', 'lenovo', 'a7000', '3412', '4G', 'tidak ada', 2, 16, 900000, 840000, 'hp dus cas headset', '', 'bose', ''),
+(78, '2019-05-21', 'oppo', 'neo5', '1656', '3G', 'tidak ada', 1, 16, 650000, 585000, 'hp dus cas headset', '', 'sis', ''),
+(79, '2019-04-20', 'nokia', 'n105', '0429', 'E', 'tidak ada', 0, 4, 175000, 150000, 'hp dus cas', '', 'narko', ''),
+(80, '2019-04-20', 'samsung', 'j5 prime', '3310', '4G', 'resmi', 2, 16, 1300000, 1225000, 'hp dus cas headset', '', 'sis', ''),
+(81, '2019-04-20', 'samsung', 'j3 pro', '8311', '4G', 'resmi', 2, 16, 1300000, 1200000, 'hp dus cas headset', '', 'narko', ''),
+(82, '2019-04-20', 'brandcode', 'b81', '8081', 'E', 'tidak ada', 0, 4, 185000, 135000, 'hp dus cas', '', 'sis', ''),
+(83, '2019-04-20', 'lenovo', 'a6000', '6371', '4G', 'tidak ada', 1, 8, 725000, 650000, 'hp dus cas headset', '', 'sis', ''),
+(84, '2019-04-20', 'lenovo', 'a6600', '4732', '4G', 'tidak ada', 2, 16, 890000, 800000, 'hp dus cas headset', '', 'sis', ''),
+(87, '2019-04-19', 'smartfren', 'andromax b', '4540', '4G', 'resmi', 1, 8, 450000, 400000, 'hp dus cas headset', '', 'sis', ''),
+(88, '2019-04-19', 'xiaomi', 'redmi 5a', '7287', '4G', 'distributor', 2, 16, 1050000, 1000000, 'hp dus cas', '', 'sis', ''),
+(89, '2019-05-23', 'samsung', 'j2 prime', '6286', '4G', 'resmi', 1.5, 8, 925000, 875000, 'hp dus cas headset', '', 'narko', ''),
+(90, '2019-05-23', 'vivo', 'y53', '0113', '4G', 'resmi', 2, 16, 1100000, 1050000, 'hp dus cas headset', '', 'narko', 'bsb'),
+(91, '2019-05-24', 'samsung', 'j7 2016', '7290', '4G', 'tidak ada', 2, 16, 1350000, 1275000, 'hp dus cas headset', '', 'sis', ''),
+(92, '2019-05-27', 'xiaomi', 'redmi 5a', '9293', '4G', 'distributor', 2, 16, 1185000, 1100000, 'hp dus cas', '', 'sis', ''),
+(93, '2019-05-27', 'huawei', 'y3', '3017', '4G', 'tidak ada', 1, 8, 735000, 675000, 'hp dus cas headset', '', 'sis', ''),
+(94, '2019-05-28', 'xiaomi', 'redmi note 4x', '6644', '4G', 'distributor', 3, 32, 1350000, 1280000, 'hp dus cas', '', 'sis', ''),
+(95, '2019-05-28', 'oppo', 'a37', '0811', '4G', 'resmi', 2, 16, 1075000, 1025000, 'hp dus cas headset', '', 'sis', ''),
+(96, '2019-05-29', 'lenovo', 'p70', '2617', '4G', 'tidak ada', 2, 16, 850000, 800000, 'hp dus cas headset', '', 'sis', ''),
+(97, '2019-05-29', 'vivo', 'y93', '6491', '4G', 'resmi', 3, 32, 1750000, 1650000, 'hp dus cas', '', 'narko', ''),
+(98, '2019-05-29', 'samsung', 'galaxy v', '4810', '3G', 'tidak ada', 1, 8, 400000, 400000, 'hp dus cas headset', '', 'sis', ''),
+(99, '2019-05-30', 'xiaomi', 'mi max2', '1424', '4G', 'distributor', 4, 64, 1975000, 1875000, 'hp dus cas', '', 'sis', ''),
+(100, '2019-05-30', 'samsung', 'a50', '4124', '4G', 'resmi', 4, 64, 2925000, 2925000, 'hp dus cas headset', '', 'bose sis', ''),
+(101, '2019-05-30', 'lenovo', 'a6000+', '3535', '4G', 'tidak ada', 2, 16, 800000, 750000, 'hp dus cas headset', '', 'narko', ''),
+(102, '2019-05-31', 'xiaomi', 'redmi 4x', '4442', '4G', 'distributor', 3, 32, 1200000, 1110000, 'hp dus cas', '', 'sis', ''),
+(103, '2019-05-31', 'samsung', 'j2 prime', '2666', '4G', 'tidak ada', 1.5, 8, 935000, 875000, 'hp dus cas headset', '', 'narko', ''),
+(104, '2019-06-01', 'xiaomi', 'redmi note 5a', '7018', '4G', 'tidak ada', 2, 16, 1000000, 930000, 'hp cas', '', 'sis', ''),
+(105, '2019-06-01', 'oppo', 'f5', '8072', '4G', 'resmi', 4, 32, 1850000, 1775000, 'hp dus cas headset', '', 'narko', ''),
+(106, '2019-06-01', 'oppo', 'a7', '8776', '4G', 'resmi', 3, 64, 2150000, 2050000, 'hp dus cas', '', 'sis', ''),
+(107, '2019-06-03', 'evercoss', 'tab x7', '6407', '3G', 'tidak ada', 1, 8, 450000, 400000, 'hp dus cas headset', '', 'sis', ''),
+(108, '2019-06-03', 'evercoss', 'u55', '9901', '4G', 'tidak ada', 1, 8, 625000, 560000, 'hp dus cas headset', '', 'sis', ''),
+(109, '2019-06-03', 'advan', 'tab e1c', '4136', 'E', 'tidak ada', 1, 4, 350000, 300000, 'hp cas', '', 'sis', ''),
+(110, '2019-06-03', 'lenovo', 'a7000', '4593', '4G', 'tidak ada', 2, 8, 800000, 740000, 'hp dus cas headset', '', 'sis', ''),
+(111, '2019-06-04', 'lenovo', 'a7000', '3412', '4G', 'tidak ada', 2, 16, 900000, 850000, 'hp dus cas headset', '', 'bose', ''),
+(112, '2019-06-04', 'meizu', 'c9', '4957', '4G', 'distributor', 2, 16, 925000, 850000, 'hp dus cas headset', '', 'bose', ''),
+(113, '2019-06-10', 'nokia', '3100', '5274', 'E', 'tidak ada', 0, 4, 100000, 75000, 'hp cas', '', 'bose', ''),
+(114, '2019-06-10', 'evercoss', 'tab at7e', '5669', '3G', 'tidak ada', 1, 4, 375000, 375000, 'hp cas', '', 'bose', ''),
+(115, '2019-06-10', 'vivo', 'y53', '7136', '4G', 'resmi', 2, 16, 990000, 900000, 'hp dus cas headset', '', 'narko', ''),
+(116, '2019-06-10', 'samsung', 'j2', '5341', '4G', 'tidak ada', 1, 8, 850000, 775000, 'hp dus cas headset', '', 'narko', ''),
+(117, '2019-06-10', 'oppo', 'a57', '1254', '4G', 'tidak ada', 3, 32, 1375000, 1275000, 'hp dus cas headset', '', 'narko', ''),
+(118, '2019-06-10', 'vivo', 'y81', '9675', '4G', 'tidak ada', 2, 16, 1450000, 1350000, 'hp dus cas', '', 'narko', ''),
+(119, '2019-06-11', 'xiaomi', 'mi max 2', '1424', '4G', 'distributor', 4, 64, 1950000, 1850000, 'hp dus cas', '', 'bose', ''),
+(120, '2019-10-08', 'xiaomi', 'redmi 6', '1387', '4G', 'resmi', 3, 32, 1250000, 1200000, 'hp dus cas', 'tidk ada', 'sis', ''),
+(121, '2019-10-08', 'xiaomi', 'redmi 6a', '6845', '4G', 'resmi', 2, 16, 990000, 910000, 'hp dus cas', 'tidak ada', 'sis', ''),
+(122, '2019-10-08', 'samsung', 'j1 ace', '4568', '4G', 'tidak ada', 1, 8, 690000, 620000, 'hp dus cas', 'tidak ada', 'narko', ''),
+(123, '2019-10-10', 'samsung', 'a20', '5533', '4G', 'resmi', 3, 32, 1825000, 1725000, 'hp dus cas headset', 'tidak ada', 'narko', 'seng tuku cah bencong'),
+(124, '2019-10-10', 'oppo', 'a5s', '8854', '4G', 'resmi', 2, 32, 1475000, 14000, 'hp dus cas', 'tidak ada', 'narko', 'seng tuku cah bencong'),
+(125, '2019-10-10', 'polytron', 'w7550', '5408', '3G', 'tidak ada', 1, 8, 390000, 330000, 'hp dus cas', 'tidak ada', 'narko', ''),
+(126, '2019-10-10', 'advan', 's50 4g', '2126', '4G', 'tidak ada', 1, 8, 500000, 440000, 'hp dus cas', 'tidak ada', 'narko', ''),
+(127, '2019-10-11', 'samsung', 'j6', '9036', '4G', 'tidak ada', 3, 32, 1490000, 1400000, 'hp dus cas', 'tidak ada', 'sis', ''),
+(128, '2019-10-11', 'lenovo', 'x2ap', '7034', '4G', 'tidak ada', 2, 32, 875000, 800000, 'hp dus cas headset', 'tidak ada', 'narko', 'tidak ada slot micor sd'),
+(129, '2019-10-01', 'vivo', 'y81', '9675', '4G', 'tidak ada', 2, 16, 1275000, 1225000, 'hp dus cas', 'tidak ada', 'sis', ''),
+(130, '2019-10-01', 'samsung', 'j7 core', '7913', '4G', 'tidak ada', 2, 16, 1125000, 1125000, 'hp dus cas', '', 'narko', ''),
+(131, '2019-10-03', 'oppo', 'f1s', '7738', '4G', 'tidak ada', 3, 32, 1200000, 1100000, 'hp dus cas', '', 'sis', '');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `keys`
+--
+
+CREATE TABLE `keys` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `key` varchar(40) NOT NULL,
+  `level` int(2) NOT NULL,
+  `ignore_limits` tinyint(1) NOT NULL DEFAULT 0,
+  `is_private_key` tinyint(1) NOT NULL DEFAULT 0,
+  `ip_addresses` text DEFAULT NULL,
+  `date_created` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data untuk tabel `keys`
+--
+
+INSERT INTO `keys` (`id`, `user_id`, `key`, `level`, `ignore_limits`, `is_private_key`, `ip_addresses`, `date_created`) VALUES
+(1, 1, 'jamah', 1, 0, 0, NULL, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `limits`
+--
+
+CREATE TABLE `limits` (
+  `id` int(11) NOT NULL,
+  `uri` varchar(255) NOT NULL,
+  `count` int(10) NOT NULL,
+  `hour_started` int(11) NOT NULL,
+  `api_key` varchar(40) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `sales`
+--
+
+CREATE TABLE `sales` (
+  `id` int(11) NOT NULL,
+  `nama` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `sales`
+--
+
+INSERT INTO `sales` (`id`, `nama`) VALUES
+(1, 'boss'),
+(2, 'sis'),
+(3, 'narko');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `servis`
+--
+
+CREATE TABLE `servis` (
+  `id` int(11) NOT NULL,
+  `merk` varchar(128) NOT NULL,
+  `tipe` varchar(128) NOT NULL,
+  `imei` varchar(20) NOT NULL,
+  `kerusakan` text NOT NULL,
+  `keterangan` text NOT NULL,
+  `status` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `servis_out`
+--
+
+CREATE TABLE `servis_out` (
+  `id` int(11) NOT NULL,
+  `tanggal` date NOT NULL,
+  `merk` varchar(30) NOT NULL,
+  `tipe` varchar(30) NOT NULL,
+  `imei` varchar(10) NOT NULL,
+  `kerusakan` text NOT NULL,
+  `biaya` decimal(11,0) NOT NULL,
+  `teknisi` varchar(30) NOT NULL,
+  `catatan` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `servis_out`
+--
+
+INSERT INTO `servis_out` (`id`, `tanggal`, `merk`, `tipe`, `imei`, `kerusakan`, `biaya`, `teknisi`, `catatan`) VALUES
+(4, '2019-05-18', 'evercoss', 's45', '1111', 'ts', 125000, 'narko', ''),
+(5, '2019-05-17', 'samsung', 's5312', '1111', 'software', 50000, 'bose', ''),
+(6, '2019-05-16', 'lenovo', 'a6010', '1111', 'jalur cas', 35000, 'bose', ''),
+(7, '2019-05-16', 'samsung', 'prime', '1111', 'ts', 135000, 'bose', ''),
+(8, '2019-05-16', 'advan', 'tab', '1111', 'cas gak masuk', 50000, 'bose', ''),
+(9, '2019-05-15', 'xiaomi', 'redmi 3', '1111', 'board cas', 90000, 'bose', ''),
+(10, '2019-05-15', 'smartfren', 'andromax a', '1111', 'cas gak masuk', 40000, 'bose', ''),
+(11, '2019-05-14', 'nokia', 'n306', '1111', 'cas gak masuk', 30000, 'bose', ''),
+(12, '2019-05-13', 'nokia', 'x', '1111', 'konektor sim', 35000, 'bose', ''),
+(13, '2019-05-11', 'xiaomi', 'redmi s2', '1111', 'software micloud frp', 125000, 'narko', ''),
+(14, '2019-05-11', 'nokia', 'rm1013', '1111', 'cas tombol power', 140000, 'bose', ''),
+(15, '2019-05-11', 'samsung', 'j1ace', '1111', 'software frp', 75000, 'narko', ''),
+(16, '2019-05-10', 'samsung', 'j5 2016', '1111', 'mati', 175000, 'bose', ''),
+(17, '2019-05-10', 'XIAOMI', 'redmi 3', '1111', 'software', 65000, 'bose', ''),
+(18, '2019-05-09', 'evercoss', 'at7j', '1111', 'cas gak masuk', 35000, 'bose', ''),
+(19, '2019-05-08', 'oppo', 'a71 2018', '1111', 'software kode', 75000, 'narko', ''),
+(20, '2019-05-08', 'xiaomi', 'redmi note 5a', '1111', 'software', 75000, 'bose', ''),
+(21, '2019-05-08', 'coolpad', 'coolpad', '1111', 'software', 70000, 'bose', ''),
+(22, '2019-05-07', 'nokia', 'n501', '1111', 'ts', 100000, 'narko', ''),
+(23, '2019-05-02', 'evercoss', 's50k', '1111', 'software', 50000, 'narko', ''),
+(24, '2019-05-01', 'smartfren', 'andromax a', '1111', 'cas gak masuk', 60000, 'bose', ''),
+(25, '2019-04-30', 'samsung', 'tab2', '1111', 'mati', 85000, 'bose', ''),
+(26, '2019-04-29', 'evercoss', 'e11t', '1111', 'keypad', 15000, 'bose', ''),
+(34, '2019-04-27', 'samsung', 'galaxy v', '1111', 'software', 45000, 'bose', ''),
+(35, '2019-04-27', 'samsung', 'j3 pro', '1111', 'software', 85000, 'bose', ''),
+(36, '2019-04-25', 'oppo', 'a39', '1111', 'lcd frp buzzer', 475, 'bose', ''),
+(37, '2019-04-25', 'oppo', 'a37', '1111', 'lcd', 325000, 'bose', ''),
+(38, '2019-04-24', 'asus', 'zenfone live l1', '1111', 'software frp', 90000, 'narko', ''),
+(39, '2019-04-23', 'evercoss', 'a74j', '1111', 'konektor baterai', 60000, 'bose', ''),
+(40, '2019-04-23', 'evercoss', 'u55', '1111', 'cas gak masuk', 60000, 'bose', ''),
+(41, '2019-04-22', 'evercoss', 's45', '1111', 'software', 65000, 'bose', ''),
+(42, '2019-04-22', 'lenovo', 'a369', '1111', 'software', 50000, 'bose', ''),
+(43, '2019-04-22', 'asus', 'zenfone 2', '1111', 'buzzer chasing', 90000, 'bose', ''),
+(44, '2019-05-21', 'huawei', 'y5', '1111', 'ts', 125000, 'bose', ''),
+(45, '2019-05-21', 'huawei', 'y5', '1111', 'konslet kena air', 100000, 'bose', ''),
+(46, '2019-05-21', 'advan', 'i5c lite', '1111', 'ts kode', 175000, 'bose', ''),
+(47, '2019-04-20', 'advan', 'tab i7 lite', '1111', 'ts', 135000, 'bose', ''),
+(48, '2019-04-20', 'asus', 'zenfone 5', '1111', 'kamera', 125000, 'bose', ''),
+(49, '2019-04-20', 'samsung', 'galaxy v', '1111', 'ts', 135000, 'bose', ''),
+(50, '2019-04-20', 'brandcode', 'b230', '1111', 'software', 45000, 'bose', ''),
+(54, '2019-04-19', 'asus', 'zenfone 3 max', '1111', 'software', 45000, 'bose', ''),
+(55, '2019-04-19', 'samsung', 'j3', '1111', 'jalur cas', 75000, 'bose', ''),
+(56, '2019-05-23', 'xiaomi', 'redmi 4x', '1111', 'software frp', 90000, 'narko', ''),
+(57, '2019-05-27', 'lenovo', 'a7000', '1111', 'on off', 45000, 'bose', ''),
+(58, '2019-05-28', 'lenovo', 'a6600', '1111', 'cas', 65000, 'bose', ''),
+(59, '2019-05-30', 'lenovo', 'a6600', '1111', 'lcd', 290000, 'bose', ''),
+(60, '2019-05-30', 'advan', 'i5c', '1111', 'on off', 50000, 'bose', ''),
+(61, '2019-05-30', 'xiaomi', 'redmi 4a', '1111', 'software micloud', 125000, 'narko', ''),
+(62, '2019-05-31', 'lenovo', 'a369', '1111', 'sim imei', 125000, 'bose', ''),
+(63, '2019-05-31', 'infinix', 'x554', '6061', 'on off', 50000, 'bose', ''),
+(64, '2019-06-01', 'oppo', 'f1s', '1111', 'lcd ts', 325000, 'narko', ''),
+(65, '2019-06-01', 'xiaomi', 'redmi 4a', '1111', 'ps batterai', 40000, 'bose', ''),
+(66, '2019-06-01', 'xiaomi', 'redmi 4a', '1111', 'lcd ts', 300000, 'narko', ''),
+(67, '2019-06-01', 'advan', 'i5c', '1111', 'on off', 50000, 'bose', ''),
+(68, '2019-06-03', 'asus', 'zenfone go', '1111', 'cas', 65000, 'bose', ''),
+(69, '2019-06-03', 'huawei', 'y21', '1111', 'software', 60000, 'sis', ''),
+(70, '2019-06-04', 'lenovo', 'a6010', '6374', 'cas software kabel data', 115000, 'bose', ''),
+(71, '2019-06-04', 'pb', 'pb', '1111', 'cas', 50000, 'bose', ''),
+(72, '2019-10-07', 'samsung', 'galaxy v', '0', 'tombol power', 50000, 'bose', ''),
+(73, '2019-10-08', 'powerbank', 'powerbank', '0', 'cas', 50000, 'bose', ''),
+(74, '2019-10-10', 'oppo', 'neo7', '0', 'on off', 60000, 'bose', ''),
+(75, '2019-10-01', 'nokia', '105', '0', 'mic', 35000, 'bose', ''),
+(76, '2019-10-03', 'andromax', 'a', '0', 'frp', 75000, 'sis', ''),
+(77, '2019-10-03', 'samsung', 'j2', '0', 'frp', 75000, 'sis', ''),
+(78, '2019-10-04', 'nokia', '215', '0', 'keypad', 35000, 'bose', ''),
+(79, '2019-10-04', 'lenovo', 'lenovo', '0', 'on off', 60000, 'bose', ''),
+(80, '2019-10-04', 'xiaomi', 'redmi 1s', '1945', 'on off', 60000, 'bose', '');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `servis_return`
+--
+
+CREATE TABLE `servis_return` (
+  `id` int(11) NOT NULL,
+  `tanggal` date NOT NULL,
+  `merk` varchar(30) NOT NULL,
+  `tipe` varchar(30) NOT NULL,
+  `imei` text NOT NULL,
+  `kerusakan` text NOT NULL,
+  `biaya` decimal(11,0) NOT NULL,
+  `teknisi` varchar(30) NOT NULL,
+  `catatan` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indeks untuk tabel `accesoris`
+--
+ALTER TABLE `accesoris`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `hp_in`
+--
+ALTER TABLE `hp_in`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `hp_out`
+--
+ALTER TABLE `hp_out`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `keys`
+--
+ALTER TABLE `keys`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `limits`
+--
+ALTER TABLE `limits`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `sales`
+--
+ALTER TABLE `sales`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `servis`
+--
+ALTER TABLE `servis`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `servis_out`
+--
+ALTER TABLE `servis_out`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `servis_return`
+--
+ALTER TABLE `servis_return`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT untuk tabel yang dibuang
+--
+
+--
+-- AUTO_INCREMENT untuk tabel `accesoris`
+--
+ALTER TABLE `accesoris`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=86;
+
+--
+-- AUTO_INCREMENT untuk tabel `hp_in`
+--
+ALTER TABLE `hp_in`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=119;
+
+--
+-- AUTO_INCREMENT untuk tabel `hp_out`
+--
+ALTER TABLE `hp_out`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=132;
+
+--
+-- AUTO_INCREMENT untuk tabel `keys`
+--
+ALTER TABLE `keys`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT untuk tabel `limits`
+--
+ALTER TABLE `limits`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT untuk tabel `servis`
+--
+ALTER TABLE `servis`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT untuk tabel `servis_out`
+--
+ALTER TABLE `servis_out`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
+
+--
+-- AUTO_INCREMENT untuk tabel `servis_return`
+--
+ALTER TABLE `servis_return`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
